@@ -1,0 +1,25 @@
+title: Call
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+            header.buttons:
+              name: buttons
+              type: list
+              label: Buttons / Call to actions
+              style: vertical
+              fields:
+                .text:
+                  type: text
+                  label: Text
+                .url:
+                  type: text
+                  label: URL

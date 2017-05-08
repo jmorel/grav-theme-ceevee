@@ -1,0 +1,34 @@
+title: Form
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+            header.lead:
+              type: markdown
+              label: Lead
+            header.widgets:
+              name: widgets
+              type: list
+              label: Widgets
+              style: vertical
+              fields:
+                .title:
+                  type: text
+                  label: Title
+                .content:
+                  name: widget_content
+                  type: list
+                  label: Content
+                  style: vertical
+                  fields:
+                    .line:
+                      type: text
+                      label: Line

@@ -1,0 +1,45 @@
+title: About
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        layout:
+          type: tab
+          title: Address
+          fields:
+            header.title2:
+              name: title2
+              label: Address section's title
+              type: text
+            header.address:
+              name: address
+              type: list
+              label: Address lines
+              style: vertical
+              fields:
+                .line:
+                  type: text
+                  label: Address line
+            header.email:
+              name: email
+              type: email
+              label: Email address
+            header.buttons:
+              name: buttons
+              type: list
+              label: Buttons
+              style: vertical
+              fields:
+                .url:
+                  type: text
+                  label: URL
+                .icon:
+                  type: text
+                  label: Icon (based on FontAwesome)
+                .text:
+                  type: text
+                  label: Label

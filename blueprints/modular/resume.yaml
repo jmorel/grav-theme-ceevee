@@ -1,0 +1,53 @@
+title: Resume
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        sections:
+          type: tab
+          title: Sections
+          fields:
+            header.sections:
+              name: sections
+              type: list
+              label: Resume sections
+              style: vertical
+              btnLabel: Add section
+              fields:
+                .title:
+                  type: text
+                  label: Section title
+                .items:
+                  type: list
+                  label: Section entries
+                  style: vertical
+                  btnLabel: Add entry
+                  fields:
+                    .title:
+                      type: text
+                      label: Title
+                    .info:
+                      type: text
+                      label: Info
+                    .date:
+                      type: text
+                      label: Date
+                    .description:
+                      type: markdown
+                      label: Description
+                    .skills:
+                      type: list
+                      label: Skills
+                      style: vertical
+                      btnLabel: Add skill
+                      fields:
+                        .name:
+                          type: text
+                          label: Skill name
+                        .level:
+                          type: int
+                          label: Skill level (%)
