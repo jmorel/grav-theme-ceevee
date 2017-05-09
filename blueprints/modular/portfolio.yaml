@@ -32,6 +32,9 @@ form:
                 .details:
                   type: text
                   label: URL
+                .img:
+                  label: Picture
+                  type: pagemediaselect
         options:
           type: tab
           fields:
