@@ -14,7 +14,7 @@ form:
             header.portfolio:
               name: portfolio
               type: list
-              label: Portfolio
+              label: Portfolio items
               style: vertical
               fields:
                 .title:
@@ -32,3 +32,21 @@ form:
                 .details:
                   type: text
                   label: URL
+        options:
+          type: tab
+          fields:
+            navigation:
+              type: section
+              title: Navigation menu
+              underline: true
+              fields:
+                header.hidemenu:
+                  label: Display in menu
+                  type: toggle
+                  options:
+                    1: Hide
+                    0: Display
+                  default: 0
+                  highlight: 0
+                  validate:
+                    type: bool

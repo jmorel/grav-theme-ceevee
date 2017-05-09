@@ -7,39 +7,67 @@ form:
       type: tabs
       active: 1
       fields:
-        layout:
+        content:
           type: tab
-          title: Address
+          title: Content
           fields:
-            header.title2:
-              name: title2
-              label: Address section's title
-              type: text
-            header.address:
-              name: address
-              type: list
-              label: Address lines
-              style: vertical
+            address:
+              type: section
+              title: Address
+              underline: true
               fields:
-                .line:
+                header.title2:
+                  name: title2
+                  label: Address section's title
                   type: text
-                  label: Address line
-            header.email:
-              name: email
-              type: email
-              label: Email address
-            header.buttons:
-              name: buttons
-              type: list
-              label: Buttons
-              style: vertical
+                header.email:
+                  name: email
+                  type: email
+                  label: Email address
+                header.address:
+                  name: address
+                  type: list
+                  label: Address lines
+                  style: vertical
+                  fields:
+                    .line:
+                      type: text
+                      label: Address line
+            buttons:
+              type: section
+              title: Buttons
+              underline: true
               fields:
-                .url:
-                  type: text
-                  label: URL
-                .icon:
-                  type: text
-                  label: Icon (based on FontAwesome)
-                .text:
-                  type: text
-                  label: Label
+                header.buttons:
+                  name: buttons
+                  type: list
+                  label: Buttons
+                  style: vertical
+                  fields:
+                    .url:
+                      type: text
+                      label: URL
+                    .icon:
+                      type: text
+                      label: Icon (based on FontAwesome)
+                    .text:
+                      type: text
+                      label: Label
+        options:
+          type: tab
+          fields:
+            navigation:
+              type: section
+              title: Navigation menu
+              underline: true
+              fields:
+                header.hidemenu:
+                  label: Display in menu
+                  type: toggle
+                  options:
+                    1: Hide
+                    0: Display
+                  default: 0
+                  highlight: 0
+                  validate:
+                    type: bool

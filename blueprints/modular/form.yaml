@@ -32,3 +32,21 @@ form:
                     .line:
                       type: text
                       label: Line
+        options:
+          type: tab
+          fields:
+            navigation:
+              type: section
+              title: Navigation menu
+              underline: true
+              fields:
+                header.hidemenu:
+                  label: Display in menu
+                  type: toggle
+                  options:
+                    1: Hide
+                    0: Display
+                  default: 0
+                  highlight: 0
+                  validate:
+                    type: bool
