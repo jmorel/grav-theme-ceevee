@@ -41,3 +41,14 @@ form:
                   highlight: 0
                   validate:
                     type: bool
+            background:
+              type: section
+              title: Background
+              underline: true
+              fields:
+                header.background:
+                  type: file
+                  label: Background
+                  destination: 'user/themes/ceevee/user_assets'
+                  accept:
+                    - image/*
