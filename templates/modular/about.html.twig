@@ -1,7 +1,13 @@
 <section id="about">
     <div class="row">
         <div class="three columns">
-            <img class="profile-pic"  src="{{ page.media.images['profilepic.jpg'].url }}" alt="" />
+            <img class="profile-pic"
+                    {% if page.header.avatar %}
+                        src="{{ page.media[page.header.avatar].url }}"
+                    {% else %}
+                        src="user/themes/ceevee/images/profilepic.jpg"
+                    {% endif %}
+                 alt="" />
         </div>
 
         <div class="nine columns main-col">

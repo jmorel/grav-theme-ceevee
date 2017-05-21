@@ -11,11 +11,10 @@ form:
           type: tab
           title: Content
           fields:
-            avatar:
-              type: section
-              title: Avatar
-              underline: true
-              text: To setup your avatar, save it as "profilepic.jpg" and use the "Page media" above to upload the file.
+            header.avatar:
+              type: pagemediaselect
+              label: Avatar
+              help: Upload your picture in the "Page media" section above and select it in the list
             address:
               type: section
               title: Address
