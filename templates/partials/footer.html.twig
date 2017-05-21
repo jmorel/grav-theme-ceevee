@@ -2,12 +2,12 @@
     <div class="row">
         <div class="twelve columns">
             <ul class="social-links">
-                {% for item in site.social %}
+                {% for item in theme.social %}
                 <li><a href="{{ item.url }}"><i class="fa fa-{{ item.icon }}"></i></a></li>
                 {% endfor %}
             </ul>
             <ul class="copyright">
-                {% for item in site.copyright %}
+                {% for item in theme.copyright %}
                 <li>{{ item.line }}</li>
                 {% endfor %}
             </ul>

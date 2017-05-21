@@ -5,7 +5,7 @@
 <head>
     {% block head %}
         <meta charset="utf-8" />
-        <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
+        <title>{% if header.title %}{{ header.title }} | {% endif %}{{ theme.title }}</title>
         {% include 'partials/metadata.html.twig' %}
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
@@ -38,7 +38,6 @@
             {% do assets.addJs('theme://js/jquery.fittext.js') %}
             {% do assets.addJs('theme://js/magnific-popup.js') %}
             {% do assets.addJs('theme://js/init.js') %}
-            {% include 'partials/twFetcher.html.twig' %}
         {% endblock %}
         {{ assets.js() }}
     </body>

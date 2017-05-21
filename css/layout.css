@@ -118,6 +118,13 @@ header .scrolldown a {
 }
 header .scrolldown a:hover { color: #11ABB0; }
 
+header strong,
+header i {
+    font-family: inherit;
+    font-size: inherit;
+    color: #fff;
+}
+
 /* primary navigation
 --------------------------------------------------------------------- */
 #nav-wrap ul, #nav-wrap li, #nav-wrap a {

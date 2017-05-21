@@ -23,11 +23,18 @@
                 </p>
             </div>
             {% endfor %}
-            <div class="widget widget_tweets">
-                <h4 class="widget-title">Latest Tweets</h4>
-                <div id="tw-widget1">
-                </div>
-            </div>
+            {% if theme.social %}
+                {% for item in theme.social %}
+                    {% if item.icon == 'twitter' %}
+                        {% set twitter_handle = (item.url | split('twitter.com/'))[1] %}
+                        <div class="widget widget_tweets">
+                            <a class="twitter-timeline" data-theme="dark" data-link-color="#11ABB0"
+                               href="https://twitter.com/{{ twitter_handle }}">Tweets by {{ twitter_handle }}</a>
+                            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
         </aside>
     </div>
 </section>

@@ -15,3 +15,53 @@ license: CC BY 3.0
 form:
   validation: strict
   fields:
+    header:
+      type: section
+      title: Header
+      underline: true
+      fields:
+        title:
+          type: text
+          label: Title
+        description:
+          type: markdown
+          label: Introduction
+        background:
+          type: file
+          label: Background
+          destination: 'user/themes/ceevee/user_assets'
+          accept:
+            - image/*
+    footer:
+      type: section
+      title: Footer
+      underline: true
+      fields:
+        copyright:
+          type: list
+          label: Copyright lines
+          style: vertical
+          btnLabel: Add copyright line
+          help: You can use html code in here (not markdown though)
+          fields:
+            .line:
+              type: textarea
+              label: Line text
+    social:
+      type: section
+      title: Social networks
+      underline: true
+      fields:
+        social:
+          type: list
+          label: Social network links
+          style: vertical
+          btnLabel: Add link to social network
+          fields:
+            .url:
+              type: text
+              label: URL
+            .icon:
+              type: text
+              label: Icon
+              help: FontAwesome icon name, without prefix
