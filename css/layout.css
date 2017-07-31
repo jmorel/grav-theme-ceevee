@@ -125,6 +125,14 @@ header i {
     color: #fff;
 }
 
+header p {
+    color: #fff;
+}
+
+header strong {
+    font-weight: bold;
+}
+
 /* primary navigation
 --------------------------------------------------------------------- */
 #nav-wrap ul, #nav-wrap li, #nav-wrap a {
